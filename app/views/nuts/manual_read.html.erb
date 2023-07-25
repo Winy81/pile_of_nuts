@@ -1,0 +1,20 @@
+<h1>Manual Read - Nuts Transport</h1>
+
+<%= form_tag nuts_manual_read_path, method: :post do %>
+  <label for="distance">Distance (km):</label>
+  <%= text_field_tag :distance %><br>
+
+  <label for="nuts">Nuts (kg):</label>
+  <%= text_field_tag :nuts %><br>
+
+  <label for="consumed_per_km">Nuts Consumed per km:</label>
+  <%= text_field_tag :consumed_per_km %><br>
+
+  <label for="cart_capacity">Cart Capacity (kg):</label>
+  <%= text_field_tag :cart_capacity %><br>
+
+  <%= submit_tag "Send" %>
+<% end %>
+
+</br>
+<%= button_to "Back to Index", root_path, method: :get %>

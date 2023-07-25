@@ -1,0 +1,17 @@
+<h1>Calculated from File</h1>
+
+<% @result.each do |data| %>
+
+<p>Distance: <%= data[:incoming_data][0] %></p>
+<p>Nuts: <%= data[:incoming_data][1] %></p>
+<p>Consumed on one km: <%= data[:incoming_data][2] %></p>
+<p>Cart capacity: <%= data[:incoming_data][3] %></p>
+
+<p>Max Transportable Nuts: <%= data[:result] %></p>
+
+</br>
+</br>
+<% end %>
+
+</br>
+<%= button_to "Back to Index", root_path, method: :get %>

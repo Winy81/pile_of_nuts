@@ -1,30 +1,5 @@
 class NutsTransporterCalculator
 
-  #def self.compute_maximum_nuts(distance, nuts, consumed_per_km, cart_capacity)
-
-    ## Calculate the maximum distance the horse can travel with the current nuts in the cart
-    #max_distance = (nuts / consumed_per_km).to_f
-    #max_distance_on_each_way = (cart_capacity / consumed_per_km).to_f
-    #
-    ## Return 0 if have not enough nuts or not enough capacity for feeding for a deliver
-    #return 0 if (max_distance < distance) || (max_distance_on_each_way < distance)
-    #
-    ## Calculate the number of trips needed to transport all nuts to the town
-    #num_trips = (nuts / cart_capacity.to_f).floor
-    #
-    ## Calculate the total distance traveled by the horse during all trips
-    #total_distance = distance * num_trips
-    #
-    ## Calculate the number of nuts what we will deliver on the calculated journeys and reduce with cost (ate nuts on the delivery)
-    #max_nuts = (num_trips * cart_capacity) - (total_distance * consumed_per_km)
-    #
-    ## Return the value, if they would eat more than on the cart just return with 0
-    ## Alternative way
-    ## max_nuts.to_f > 0 ? max_nuts.to_f : 0
-    #
-    #return max_nuts
-  #end
-
   def self.compute_maximum_nuts(distance, nuts, consumed_per_km, cart_capacity)
 
     remaining_nuts = nuts

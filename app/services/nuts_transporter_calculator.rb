@@ -28,7 +28,6 @@ class NutsTransporterCalculator
     end
 
     @delivered_nuts
-
   end
 
   private

@@ -21,7 +21,7 @@ class NutsTransporterCalculator
       @remaining_nuts = @remaining_nuts - ate_supplement_on_there_and_back - @delivered_nuts
     end
 
-    # The last trip (or only trip if the return not possible) - can be - is a single if nuts can cover the trip only there and also the cart has enough capacity for it
+    # The last trip (or only trip if the return is not possible) - can be - is a single if nuts can cover the trip only there and also the cart has enough capacity for it
     if  is_the_remaining_nuts_can_cover_a_full_way? && is_the_capacity_enough_to_cover_a_full_way?
       @last_trip_nuts = @cart_capacity < @remaining_nuts ? @cart_capacity - ate_supplement_on_single_trip : @remaining_nuts - ate_supplement_on_single_trip
       @delivered_nuts += @last_trip_nuts
